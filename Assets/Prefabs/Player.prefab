@@ -122,8 +122,8 @@ GameObject:
   - component: {fileID: 6302789823308549632}
   - component: {fileID: 6302789823308549635}
   m_Layer: 9
-  m_Name: Character
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3f843202bd52e49b7fb72f42cfce75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 6302789821792348107}
+  cannonBall: {fileID: 0}
+  force: 5
   hp: 20
   movementSpeed: 5
-  bulletGO: {fileID: 3544854745058353821, guid: 262a83e3eb0a6af4696a81613b1493ec,
-    type: 3}
-  spawnPosition: {fileID: 6302789821792348107}
