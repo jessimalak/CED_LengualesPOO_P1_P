@@ -601,6 +601,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6302789823308549634, guid: 0cfaf14372197cd488eaa3983b80140e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6302789823308549639, guid: 0cfaf14372197cd488eaa3983b80140e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -656,6 +661,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3035330372257014862, guid: 0cfaf14372197cd488eaa3983b80140e,
+        type: 3}
+      propertyPath: cannonBall
+      value: 
+      objectReference: {fileID: 3544854745058353820, guid: 262a83e3eb0a6af4696a81613b1493ec,
+        type: 3}
+    - target: {fileID: 3035330372257014862, guid: 0cfaf14372197cd488eaa3983b80140e,
+        type: 3}
+      propertyPath: hp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035330372257014862, guid: 0cfaf14372197cd488eaa3983b80140e,
+        type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 514269648}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfaf14372197cd488eaa3983b80140e, type: 3}
 --- !u!1001 &6302789823408913034
@@ -668,6 +689,11 @@ PrefabInstance:
     - target: {fileID: 6302789823308549634, guid: bda0327416b321f448e81762d939ff2b,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302789823308549634, guid: bda0327416b321f448e81762d939ff2b,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6302789823308549639, guid: bda0327416b321f448e81762d939ff2b,
@@ -725,5 +751,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6302789823308549635, guid: bda0327416b321f448e81762d939ff2b,
+        type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 397264723}
+    - target: {fileID: 6302789823308549635, guid: bda0327416b321f448e81762d939ff2b,
+        type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302789823308549635, guid: bda0327416b321f448e81762d939ff2b,
+        type: 3}
+      propertyPath: cannonBall
+      value: 
+      objectReference: {fileID: 3544854745058353820, guid: 262a83e3eb0a6af4696a81613b1493ec,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bda0327416b321f448e81762d939ff2b, type: 3}
