@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
@@ -27,6 +27,7 @@ public class Character : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("gameOver");
         }
     }    
 }

@@ -23,10 +23,10 @@ public class Player : Character
     {
         vida.text = hp.ToString();
 
-        if (hp == 0)
+     /*   if (hp == 0)
         {
             SceneManager.LoadScene("gameOver");
-        }
+        }*/
 
         if (Input.GetMouseButtonUp(0))
         {
