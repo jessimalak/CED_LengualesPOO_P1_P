@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     private Rigidbody myRigidbody;
     private Collider myCollider;
 
+    public ParticleSystem particles;
+
     public int damage = 1;
 
     // Start is called before the first frame update
@@ -52,6 +54,11 @@ public class Bullet : MonoBehaviour
         //{
         //    col.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
         //}
+
+        if (particles != null)
+        {
+            Instantiate<ParticleSystem>(particles, transform.position, particles.transform.rotation).Play();
+        }
 
         AutoDestroy();
     }
