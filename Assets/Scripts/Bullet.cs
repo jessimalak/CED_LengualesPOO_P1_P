@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     private Collider myCollider;
 
     public ParticleSystem particles;
+    public AudioSource impact; 
 
     public int damage = 1;
 
@@ -18,6 +19,7 @@ public class Bullet : MonoBehaviour
 
         if (myRigidbody != null)
         {
+            GameObject impactFXGO = GameObject.FindGameObjectWithTag("Impact");
             Invoke("AutoDestroy", 10F);
 
             myCollider = GetComponent<Collider>();
