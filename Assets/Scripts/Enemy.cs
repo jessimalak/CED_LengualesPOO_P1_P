@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : Character
 {
@@ -7,7 +8,9 @@ public class Enemy : Character
 
     private float movementValue = 0F;
     private float elapsedTime;
-    private bool returning = false;    
+    private bool returning = false;
+
+    public Text vida;
 
     private void Start()
     {
@@ -17,8 +20,20 @@ public class Enemy : Character
     // Update is called once per frame
     private void Update()
     {
-        spawnPosition.LookAt(
-            GameObject.FindGameObjectWithTag("Player").transform);
+        vida.text = hp.ToString();
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if ( player != null)
+        {
+            spawnPosition.LookAt(player.transform);
+
+        }
+        else
+        {
+            CancelInvoke("FireBullet");
+        }
+        
 
         movementValue = Mathf.Lerp(-1F, 1F, elapsedTime);
 
