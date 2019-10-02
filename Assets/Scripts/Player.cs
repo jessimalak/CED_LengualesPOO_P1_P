@@ -11,17 +11,23 @@ public class Player : Character
     private float movementValue = 0F;
 
     public Text vida;
-    
 
-    //private void Start()
-    //{
+    private void Start()
+    {
+        float dañoBarra = 1 / hp;
+
     //    InvokeRepeating("FireBullet", 0F, 3F);
-    //}    
+    }    
 
     // Update is called once per frame
+
+
     private void Update()
     {
         vida.text = hp.ToString();
+
+        
+       // barra.Scale = barra.Scale - dañoBarra;
 
      /*   if (hp == 0)
         {
