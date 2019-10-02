@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
@@ -13,9 +12,6 @@ public class Bullet : MonoBehaviour
 
     public int damage = 1;
 
-    
-    
-
     // Start is called before the first frame update
     private void Start()
     {
@@ -24,6 +20,10 @@ public class Bullet : MonoBehaviour
         if (myRigidbody != null)
         {
             GameObject impactFXGO = GameObject.FindGameObjectWithTag("Impact");
+            if (impactFXGO != null)
+            {
+                impact = impactFXGO.GetComponent<AudioSource>();
+            }
             Invoke("AutoDestroy", 10F);
 
             myCollider = GetComponent<Collider>();
@@ -46,13 +46,25 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
+        if (impact != null)
+        {
+            impact.Play();
+        }
         if (col.gameObject.tag == "Player" 
             || col.gameObject.tag == "Enemy")
         {
             col.gameObject.GetComponent<Character>().ApplyDamage(damage);
         }
 
-        
+        //if (col.gameObject.tag == "Player")
+        //{
+        //    col.gameObject.GetComponent<Player>().ApplyDamage(damage);
+        //}
+        //else if (col.gameObject.tag == "Enemy")
+        //{
+        //    col.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
+        //}
+
         if (particles != null)
         {
             Instantiate<ParticleSystem>(particles, transform.position, particles.transform.rotation).Play();
